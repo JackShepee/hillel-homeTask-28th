@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/Header/Header.jsx';
-import Main from './components/Main/Main.jsx';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 import './globalStyles.scss'; 
 
 const App = () => {
-  return (
+    return (
     <div>
       <Header />
       <Main />
@@ -13,4 +13,5 @@ const App = () => {
   );
 }
 
+console.log("Attempting to render...");
 ReactDOM.render(<App />, document.getElementById('root'));

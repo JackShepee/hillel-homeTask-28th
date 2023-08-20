@@ -7,6 +7,7 @@ const Header = () => {
     <header className="header">
       <MenuItem title="Головна" />
       <MenuItem title="Матеріали" />
+      <MenuItem title="Питання" />
       <MenuItem title="Контакти" />
     </header>
   );

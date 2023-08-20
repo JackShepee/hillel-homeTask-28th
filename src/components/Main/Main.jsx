@@ -6,8 +6,8 @@ import './Main.scss';
 const Main = () => {
   return (
     <main className="main-content">
-      <Logo />
       <Description />
+      <Logo />
     </main>
   );
 }
