@@ -1,0 +1,26 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master  # Або назва гілки, яку ви хочете деплоїти
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2.3.1
+      with:
+        persist-credentials: false
+
+    - name: Install and Build 🔧
+      run: |
+        npm install
+        npm run build  # Замініть на вашу команду для збілдження
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+        branch: gh-pages  # Гілка для деплою
+        folder: dist  # Директорія, де зберігаються збілджені файли (змініть, якщо потрібно)
